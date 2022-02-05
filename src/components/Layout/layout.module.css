@@ -1,0 +1,27 @@
+header {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    height: 80px;
+    /* background-color: #024430; */
+}
+
+header .logo {
+    padding: 1em 0 0 1em;
+}
+
+.main-nav {
+    position: absolute;
+    right: 10%;
+    top: 1em;
+}
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav li {
+    padding: 0 1em;
+    font-weight: bold;
+}
