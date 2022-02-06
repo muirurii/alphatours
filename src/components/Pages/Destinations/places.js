@@ -5,6 +5,7 @@ const places = [{
         background: "https://images.pexels.com/photos/1423580/pexels-photo-1423580.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=1024",
         price: 8570,
         duration: 5,
+        category: "adventure",
         level: "High"
     },
     {
@@ -14,6 +15,7 @@ const places = [{
         background: "https://images.pexels.com/photos/5306140/pexels-photo-5306140.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=1024",
         price: 60,
         duration: 2,
+        category: "wildlife",
         level: 'Average',
     },
     {
@@ -23,6 +25,7 @@ const places = [{
         background: "https://images.pexels.com/photos/3522880/pexels-photo-3522880.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=1024",
         price: 180,
         duration: 3,
+        category: "adventure",
         level: "Average",
     },
     {
@@ -32,6 +35,7 @@ const places = [{
         background: "https://images.pexels.com/photos/3522880/pexels-photo-3522880.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=1024",
         price: 180,
         duration: 3,
+        category: "mountain",
         level: "Average",
     }
 ];

@@ -11,6 +11,7 @@ const App = ()=> {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/destinations' element={<Destinations />} />
+        <Route path='/destinations/:category' element={<Destinations />} />
         <Route path='/contacts' element={<ContactsPage />} />
       </Routes>
     </BrowserRouter>
