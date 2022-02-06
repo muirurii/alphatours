@@ -1,9 +1,11 @@
 import {Link} from 'react-router-dom';
+import Logo from '../../utilities/logo.png'
 
 const Header = ()=>{
     return (
             <header>
                 <div className="logo">
+                <img src={Logo} />
                     <h1>
                         Alpha Tours
                     </h1>

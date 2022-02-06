@@ -30,8 +30,7 @@ body {
 }
 
 h1 {
-    font-family: 'Supermercado One', serif;
-    color: #fff;
+    font-family: 'Quintessential', serif;
 }
 
 header {
@@ -45,7 +44,22 @@ header {
 }
 
 header .logo {
-    padding: 1em 0 0 1em;
+    padding: 1em 0 1em 1em;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 2rem;
+    width: 2rem;
+    margin-right: .4em;
+}
+
+.logo h1 {
+    color: #fff;
 }
 
 .main-nav {
@@ -69,6 +83,7 @@ header .logo {
     width: 100vw;
     background: url(https://images.pexels.com/photos/870711/pexels-photo-870711.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=1024);
     background-size: 100% 100%;
+    background-attachment: fixed;
     color: #fff;
     padding-top: 80px;
 }
@@ -81,7 +96,7 @@ header .logo {
 
 .hero-text {
     position: relative;
-    background-color: #595a5aa9;
+    background-color: #8dc2c25b;
     backdrop-filter: blur(2px);
     min-height: calc(100vh - 80px);
     padding: 0 2em;
@@ -90,7 +105,7 @@ header .logo {
     align-items: center;
     flex-direction: column;
     clip-path: inset(0 0 100% 0);
-    animation: hero 400ms linear forwards;
+    animation: hero 200ms linear forwards;
 }
 
 .hero-text p {
@@ -152,7 +167,6 @@ header .logo {
 
 .socials {
     position: absolute;
-    /* background-color: red; */
     left: 2em;
     bottom: 2em;
     display: flex;
@@ -166,6 +180,87 @@ header .logo {
 .socials i:hover {
     color: #8dc2c2;
     transform: translateX(1px);
+}
+
+#services {
+    /* background-color: red; */
+}
+
+#services h1 {
+    text-align: center;
+    padding: 1.3em 0;
+}
+
+.service-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 310px;
+    min-height: 300px;
+    background-color: #8dc2c2;
+    padding: 1em;
+    margin-bottom: 2em;
+    position: relative;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background-color: #022a44;
+    border-radius: inherit;
+    z-index: -1;
+    transform: rotateZ(1deg);
+    transition: transform 300ms ease-in-out;
+}
+
+.card:hover::after {
+    transform: rotateZ(-1deg);
+}
+
+.card div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card i {
+    height: 60px;
+    width: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    /* transform: scale(1); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card h2 {
+    color: #022a44;
+}
+
+.card p {
+    color: #022a44;
+    padding: 1em;
+}
+
+#services button {
+    display: block;
+    margin: 2em auto;
+    padding: 1.2em 2em;
+    background-color: #022a44;
+    border-radius: 3px;
+    color: #fff;
 }
 
 
@@ -186,7 +281,7 @@ header .logo {
 
 .search-bar input {
     width: 70vw;
-    height: 32px;
+    height: 40px;
     padding-left: 1em;
     font-family: inherit;
     text-align: center;
@@ -228,6 +323,12 @@ header .logo {
     padding-top: 2em;
 }
 
+.destination .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #022a44;
+}
+
 .destination button {
     display: block;
     margin-top: 2em;
@@ -239,4 +340,48 @@ header .logo {
 
 .destination button:hover {
     background-color: #022a44de;
+}
+
+
+/* Contacts */
+
+.contacts {
+    background-color: #8dc2c2;
+    padding-top: 80px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts label {
+    display: block;
+    padding: .5em 0;
+}
+
+.contacts input,
+.contacts textarea {
+    width: 50vw;
+    padding-left: 2em;
+    border: none;
+    /* border-bottom: 1px solid #022a44; */
+    border: 1px solid #022a44;
+    border-radius: 5px;
+    outline: none;
+}
+
+.contacts input {
+    height: 40px;
+}
+
+.contacts button {
+    background-color: #022a44;
+    padding: 1.6em 5em;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.contacts button:hover {
+    opacity: .95;
 }

@@ -9,6 +9,7 @@ const Destination = ({place})=> {
                   <label>Activity level </label><span>: {place.level}</span>
             </div>
             <p>{place.description}</p>
+            <label className="price">Cost : {place.price}$</label>
             <button className="">Book Trip</button>
         </div>
         </div>
