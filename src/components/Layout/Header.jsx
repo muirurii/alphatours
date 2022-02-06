@@ -21,7 +21,7 @@ const Header = ()=>{
                                 <li><Link to="/destinations/camping">Camping</Link></li>
                             </ul>
                         </li>
-                        <li><Link to="pricing">PRICING</Link></li>
+                        <li><Link to="booking">PRICING</Link></li>
                         <li><Link to="contacts">CONTACTS</Link></li>
                     </ul>
                 </nav>

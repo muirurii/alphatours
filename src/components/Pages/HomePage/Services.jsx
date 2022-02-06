@@ -1,4 +1,4 @@
-const Services = ()=>{
+const Services = ({toDestinations})=>{
     return(
         <div id="services">
             <h1>What we offer</h1>
@@ -31,7 +31,7 @@ const Services = ()=>{
                     </p>
                 </div>
             </div>
-            <button>Book Tour</button>
+            <button onClick={toDestinations}>Book Tour</button>
         </div>
     );
 }

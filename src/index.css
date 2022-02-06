@@ -17,12 +17,17 @@ ul {
 button {
     border: none;
     cursor: pointer;
-    font-family: inherit;
 }
 
 a {
     color: inherit;
     text-decoration: none;
+}
+
+input,
+textarea,
+button {
+    font-family: inherit;
 }
 
 body {
@@ -31,6 +36,11 @@ body {
 
 h1 {
     font-family: 'Quintessential', serif;
+    color: #022a44;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 header {
@@ -38,18 +48,15 @@ header {
     width: 100vw;
     top: 0;
     left: 0;
-    height: 60px;
+    height: 80px;
     background-color: #022a44;
     z-index: 100;
-}
-
-header .logo {
-    padding: 0em 0 1em 1em;
 }
 
 .logo {
     display: flex;
     align-items: center;
+    padding: 1em 0 1em 1em;
 }
 
 .logo img {
@@ -65,15 +72,19 @@ header .logo {
 .main-nav {
     position: absolute;
     right: 25%;
-    bottom: 0;
+    bottom: 0em;
 }
 
 .main-nav ul {
     display: flex;
 }
 
+.main-nav a {
+    display: block;
+}
+
 .main-nav .list>li {
-    height: 60px;
+    height: calc(80px -1em);
     padding: 1.2em 1em;
     font-weight: bold;
     color: #fff;
@@ -87,18 +98,33 @@ header .logo {
 
 .dest {
     position: relative;
+    cursor: pointer;
+    margin-right: 4px;
+}
+
+.dest::after {
+    content: '>';
+    position: absolute;
+    right: 1.5px;
+    transform: rotateZ(90deg) scaleY(1.3);
+    transition: transform 300ms linear;
+}
+
+.dest:hover::after {
+    transform: rotateZ(-90deg) scaleY(1.3);
 }
 
 .dest .more {
     display: none;
     width: 200px;
     background-color: #fff;
-    border: 1px solid #022a44;
+    border: 1px solid #8dc2c2;
     border-radius: 3px;
     font-weight: normal;
     position: absolute;
     top: 100%;
     left: 20%;
+    z-index: 200;
 }
 
 .dest:hover .more {
@@ -111,7 +137,7 @@ header .logo {
 }
 
 .more li:hover {
-    border-bottom: 1px solid #8dc2c25b;
+    background-color: #8dc2c2;
 }
 
 .hero-bg {
@@ -121,7 +147,7 @@ header .logo {
     background-size: 100% 100%;
     background-attachment: fixed;
     color: #fff;
-    padding-top: 60px;
+    padding-top: 80px;
 }
 
 .highlight h3 {
@@ -218,11 +244,6 @@ header .logo {
     transform: translateX(1px);
 }
 
-
-/* #services {
-    background-color: red;
-} */
-
 #services h1 {
     text-align: center;
     padding: 1.3em 0;
@@ -276,7 +297,6 @@ header .logo {
     width: 60px;
     background-color: #fff;
     border-radius: 50%;
-    /* transform: scale(1); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -348,13 +368,11 @@ select-pure {
     --font-family: inherit;
     --font-weight: 400;
     --select-outline: 2px solid #e3e3e3;
-    --dropdown-items: 4;
+    --dropdown-items: 6;
 }
 
 .destination {
-    /* background: url(https://images.pexels.com/photos/1423580/pexels-photo-1423580.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=1024); */
     background-size: 100% 100%;
-    background-repeat: no-repeat;
     min-height: 80vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -366,7 +384,7 @@ select-pure {
 
 .description {
     background-color: #8dc2c25b;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(8px);
     padding: 1em;
 }
 
@@ -378,6 +396,12 @@ select-pure {
 .description h3 {
     font-size: 2rem;
     text-transform: capitalize;
+    color: #022a44;
+}
+
+.destination label {
+    /* color: #fff; */
+    font-weight: bold;
 }
 
 .description p {
@@ -406,9 +430,9 @@ select-pure {
 
 /* Contacts */
 
-.contacts {
-    background-color: #8dc2c2;
-    padding-top: 80px;
+.booking {
+    background-color: #8dc2c25b;
+    padding-top: 85px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -416,33 +440,43 @@ select-pure {
     justify-content: center;
 }
 
-.contacts label {
+.booking h1 {
+    text-transform: capitalize;
+}
+
+.tour-info {
+    padding: 2em 0 0 1em;
+}
+
+.booking label {
     display: block;
     padding: .5em 0;
 }
 
-.contacts input,
-.contacts textarea {
+.booking input,
+.booking textarea {
     width: 50vw;
     padding-left: 2em;
-    border: none;
-    /* border-bottom: 1px solid #022a44; */
     border: 1px solid #022a44;
     border-radius: 5px;
     outline: none;
 }
 
-.contacts input {
+.booking textarea {
+    padding-top: 1em;
+}
+
+.booking input {
     height: 40px;
 }
 
-.contacts button {
+.booking button {
     background-color: #022a44;
     padding: 1.6em 5em;
     color: #fff;
     border-radius: 3px;
 }
 
-.contacts button:hover {
+.booking button:hover {
     opacity: .95;
 }

@@ -1,4 +1,12 @@
+import { useNavigate } from "react-router";
+
 const Destination = ({place})=> {
+    window.scrollTo(0,0);
+    const navigate = useNavigate();
+
+    const toTour = ()=>{
+        navigate(`/booking/${place.id}`);
+    }
     return ( 
         <div className="destination" style={{"backgroundImage":`url(${place.background})`}}>
         <div className="description">
@@ -6,11 +14,14 @@ const Destination = ({place})=> {
             <i className="fas fa-map-marker-alt"></i>
             <h3>{place.name}</h3>
             <div>
-                  <label>Activity level </label><span>: {place.level}</span>
+                <label>Activity level : {place.level}</label>
+            </div>
+            <div>
+                <label>Duration - {place.duration}</label>
             </div>
             <p>{place.description}</p>
             <label className="price">Cost : {place.price}$</label>
-            <button className="">Book Trip</button>
+            <button onClick={toTour}>Book Trip</button>
         </div>
         </div>
      );
