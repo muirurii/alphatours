@@ -1,8 +1,7 @@
 import Destination from "./Destination";
-import places from "./places";
 import { useParams } from "react-router";
 
-const Destinations = ()=>{
+const Destinations = ({places})=>{
   window.scrollTo(0,0);
 
   let placesArr;

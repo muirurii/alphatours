@@ -96,6 +96,55 @@ header {
     color: #022a44;
 }
 
+
+/* footer */
+
+footer {
+    min-height: 30vh;
+    padding: 2em 0;
+    background-color: #8dc2c2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
+
+footer h1 {
+    text-align: center;
+}
+
+footer .logo {
+    padding: 0;
+}
+
+footer div {
+    width: 300px;
+}
+
+footer div:last-child ul {
+    display: flex;
+}
+
+footer li {
+    padding-left: 1em;
+}
+
+footer li:hover {
+    text-decoration: underline;
+}
+
+.trustees {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.trustees img {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+
 .dest {
     position: relative;
     cursor: pointer;
@@ -115,7 +164,7 @@ header {
 }
 
 .dest .more {
-    display: none;
+    display: block;
     width: 200px;
     background-color: #fff;
     border: 1px solid #8dc2c2;
@@ -124,11 +173,17 @@ header {
     position: absolute;
     top: 100%;
     left: 20%;
-    z-index: 200;
+    clip-path: inset(0 0 100% 0);
 }
 
 .dest:hover .more {
-    display: block;
+    animation: more 200ms linear forwards;
+}
+
+@keyframes more {
+    to {
+        clip-path: inset(0 0 0 0);
+    }
 }
 
 .more li {
@@ -138,6 +193,10 @@ header {
 
 .more li:hover {
     background-color: #8dc2c2;
+}
+
+#root>div {
+    padding-bottom: 2em;
 }
 
 .hero-bg {
@@ -166,19 +225,10 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    clip-path: inset(0 0 100% 0);
-    animation: hero 200ms linear forwards;
 }
 
 .hero-text p {
-    /* text-align: center; */
     max-width: 500px;
-}
-
-@keyframes hero {
-    to {
-        clip-path: inset(0 0 0 0);
-    }
 }
 
 .align-left {
@@ -233,6 +283,7 @@ header {
     bottom: 2em;
     display: flex;
     flex-direction: column;
+    color: #000;
 }
 
 .socials i {
@@ -240,7 +291,7 @@ header {
 }
 
 .socials i:hover {
-    color: #8dc2c2;
+    color: #343434;
     transform: translateX(1px);
 }
 
@@ -258,7 +309,7 @@ header {
 
 .card {
     width: 310px;
-    min-height: 300px;
+    min-height: 350px;
     background-color: #8dc2c2;
     padding: 1em;
     margin-bottom: 2em;
@@ -321,6 +372,47 @@ header {
 }
 
 
+/* carousel */
+
+#popular-section h1 {
+    text-align: center;
+}
+
+.swiper-slide.swiper-slide.popular {
+    background-color: #8dc2c293;
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 390px;
+    border-radius: 4px;
+    margin: 1em;
+    padding: 2em 0;
+}
+
+.swiper-slide.swiper-slide.popular h3 {
+    transform: scaleY(0);
+    transition: transform 500ms;
+}
+
+.swiper-slide.swiper-slide.active.popular h3 {
+    transform: scaleY(1);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    background-color: #022a44;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    color: #022a44;
+}
+
+
 /* Destinations */
 
 .destinations {
@@ -359,9 +451,9 @@ select-pure {
     --disabled-color: #ecf0f1;
     --background-color: #fff;
     --color: #022a44;
-    --hover-background-color: #e3e3e3;
+    --hover-background-color: #8dc2c25b;
     --hover-color: #000;
-    --selected-background-color: #e3e3e3;
+    --selected-background-color: #8dc2c25b;
     --selected-color: #000;
     --dropdown-gap: 0;
     --font-size: 14px;
@@ -428,7 +520,7 @@ select-pure {
 }
 
 
-/* Contacts */
+/* Booking */
 
 .booking {
     background-color: #8dc2c25b;

@@ -1,10 +1,9 @@
-import places from "../Destinations/places";
 import { useParams } from "react-router";
 import {useState} from 'react';
 import 'select-pure';
 
 
-const Booking = ()=>{
+const Booking = ({places})=>{
 
     window.scrollTo(0,0);
     const {id} = useParams();
