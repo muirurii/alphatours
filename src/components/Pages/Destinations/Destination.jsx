@@ -4,7 +4,7 @@ const Destination = ({place})=> {
     window.scrollTo(0,0);
     const navigate = useNavigate();
 
-    const toTour = ()=>{
+    const toBooking = ()=>{
         navigate(`/booking/${place.id}`);
     }
     return ( 
@@ -21,7 +21,7 @@ const Destination = ({place})=> {
             </div>
             <p>{place.description}</p>
             <label className="price">Cost : {place.price}$</label>
-            <button onClick={toTour}>Book Trip</button>
+            <button onClick={toBooking}>Book Trip</button>
         </div>
         </div>
      );

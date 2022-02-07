@@ -101,7 +101,6 @@ header {
 
 footer {
     min-height: 30vh;
-    padding: 2em 0;
     background-color: #8dc2c2;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -362,13 +361,17 @@ footer li:hover {
     padding: 1em;
 }
 
-#services button {
-    display: block;
-    margin: 2em auto;
+#services button,
+.popular button {
     padding: 1.2em 2em;
     background-color: #022a44;
     border-radius: 3px;
     color: #fff;
+}
+
+#services button {
+    display: block;
+    margin: 2em auto;
 }
 
 
@@ -376,6 +379,10 @@ footer li:hover {
 
 #popular-section h1 {
     text-align: center;
+}
+
+#popular-section {
+    padding-bottom: 2em;
 }
 
 .swiper-slide.swiper-slide.popular {
@@ -392,13 +399,30 @@ footer li:hover {
     padding: 2em 0;
 }
 
-.swiper-slide.swiper-slide.popular h3 {
-    transform: scaleY(0);
-    transition: transform 500ms;
+.popular h2,
+.popular h3 {
+    text-transform: capitalize;
+    color: #022a44;
 }
 
-.swiper-slide.swiper-slide.active.popular h3 {
-    transform: scaleY(1);
+.popular label {
+    display: block;
+    font-weight: bold;
+}
+
+.buttons {
+    margin-top: 2em;
+}
+
+.buttons button:last-child {
+    background-color: #fff;
+    color: #000;
+    border: #022a44 solid 1px;
+    transform: translateX(10px);
+}
+
+.swiper-slide.swiper-slide.active .popular h3 {
+    transform: scaleY(3);
 }
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
@@ -416,7 +440,7 @@ footer li:hover {
 /* Destinations */
 
 .destinations {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding-top: 80px;
 }
 
@@ -465,7 +489,6 @@ select-pure {
 
 .destination {
     background-size: 100% 100%;
-    min-height: 80vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }

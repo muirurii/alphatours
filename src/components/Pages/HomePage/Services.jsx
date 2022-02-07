@@ -31,7 +31,7 @@ const Services = ({toDestinations})=>{
                     </p>
                 </div>
             </div>
-            <button onClick={toDestinations}>Book Tour</button>
+            <button onClick={toDestinations}>Views Tours</button>
         </div>
     );
 }
