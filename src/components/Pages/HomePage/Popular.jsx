@@ -4,11 +4,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+
 import PopularCard from './PopularCard';
+import { useState,useEffect } from 'react';
 
 
 const Popular = ({places})=>{
-    console.log(places);
+  const[slides,setSlides] = useState(1);
+
+  useEffect(()=>{
+    const width = window.innerWidth;
+      setSlides(width > 1000 ? 3 : width > 650 ? 2 : 1.5 );
+  },[]);
 
   return(
       <div id="popular-section">
@@ -17,13 +24,14 @@ const Popular = ({places})=>{
             // install Swiper modules
             modules={[Navigation, Pagination,Autoplay, A11y,EffectFade]}
             spaceBetween={0}
-            slidesPerView={3}
+            slidesPerView={slides}
             navigation
             autoplay={{delay:3000}}
+            centeredSlides = {true}
+            centerInsufficientSlides = {true}
+            onAutoplayResume = {true}
+            slidesPerGroupAuto = {true}
             pagination={{ clickable: true }}
-            //   scrollbar={{ draggable: false }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log('slide change')}
             effect = "cube"
             >
                 

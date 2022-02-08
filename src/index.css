@@ -17,6 +17,7 @@ ul {
 button {
     border: none;
     cursor: pointer;
+    padding: 1.6em 5em;
 }
 
 a {
@@ -28,10 +29,13 @@ input,
 textarea,
 button {
     font-family: inherit;
+    border-radius: 3px;
+    outline: none;
 }
 
 body {
     font-family: 'Poppins', serif;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -363,9 +367,7 @@ footer li:hover {
 
 #services button,
 .popular button {
-    padding: 1.2em 2em;
     background-color: #022a44;
-    border-radius: 3px;
     color: #fff;
 }
 
@@ -396,7 +398,7 @@ footer li:hover {
     height: 390px;
     border-radius: 4px;
     margin: 1em;
-    padding: 2em 0;
+    padding: 2em;
 }
 
 .popular h2,
@@ -421,10 +423,6 @@ footer li:hover {
     transform: translateX(10px);
 }
 
-.swiper-slide.swiper-slide.active .popular h3 {
-    transform: scaleY(3);
-}
-
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     background-color: #022a44;
@@ -440,7 +438,6 @@ footer li:hover {
 /* Destinations */
 
 .destinations {
-    /* min-height: 100vh; */
     padding-top: 80px;
 }
 
@@ -515,7 +512,6 @@ select-pure {
 }
 
 .destination label {
-    /* color: #fff; */
     font-weight: bold;
 }
 
@@ -532,10 +528,8 @@ select-pure {
 .destination button {
     display: block;
     margin-top: 2em;
-    padding: 1.2em 3em;
     background-color: #022a44;
     color: #fff;
-    border-radius: 4px;
 }
 
 .destination button:hover {
@@ -573,8 +567,6 @@ select-pure {
     width: 50vw;
     padding-left: 2em;
     border: 1px solid #022a44;
-    border-radius: 5px;
-    outline: none;
 }
 
 .booking textarea {
@@ -587,11 +579,79 @@ select-pure {
 
 .booking button {
     background-color: #022a44;
-    padding: 1.6em 5em;
     color: #fff;
-    border-radius: 3px;
 }
 
 .booking button:hover {
     opacity: .95;
+}
+
+
+/* contacts */
+
+.contacts {
+    padding-top: 90px;
+    background-color: #8dc2c25b;
+}
+
+.contacts h1 {
+    text-align: center;
+}
+
+.contacts-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contacts-info>div,
+.contacts-info form {
+    padding: 2em;
+}
+
+.contacts-info>div {
+    display: flex;
+    justify-content: center;
+}
+
+.contacts input,
+.contacts textarea {
+    width: 50%;
+    padding-left: 1em;
+    border: 1px solid #022a44;
+}
+
+.contacts input {
+    height: 40px;
+    margin-bottom: .5em;
+}
+
+.contacts button {
+    background-color: #022a44;
+    color: #fff;
+}
+.testimonials{
+    background-color:#fff;
+}
+.testimonials>div{
+    position: relative;
+    height: 500px;
+    max-width: 320px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.testimonial {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    height: calc(500px - 3rem);
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: 1s linear;
+}
+
+.testimonial.active {
+    transform: translateX(0%);
+    z-index: 2;
+    background-color: #8dc2c293;
 }
