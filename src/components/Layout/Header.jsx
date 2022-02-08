@@ -1,26 +1,28 @@
-import {Link} from 'react-router-dom';
 import Logo from './Logo';
+import MenuItems from './MenuItems';
+import { useState,useRef } from 'react';
 
 const Header = ()=>{
+    const[smallMenu,setSmallMenu] = useState(false);
+    
+    const handleSmallMenu = ()=>{
+        setSmallMenu(!smallMenu);
+    }
+    const m = useRef()
+    console.log(m.current);
     return (
-            <header>
-                <Logo />
-                <nav className = "main-nav">
-                    <ul className='list'>
-                        <li><Link to="/">HOME</Link></li>
-                        <li className='dest'>CATEGORIES
-                            <ul className="more">
-                                <li><Link to="/destinations/wildlife">Wildlife tour</Link></li>
-                                <li><Link to="/destinations/mountain">Mountain climbing</Link></li>
-                                <li><Link to="/destinations/adventure">Adventure</Link></li>
-                                <li><Link to="/destinations/camping">Camping</Link></li>
-                            </ul>
-                        </li>
-                        <li><Link to="about">ABOUT</Link></li>
-                        <li><Link to="contacts">CONTACTS</Link></li>
-                    </ul>
-                </nav>
-            </header>
+         <header ref={m}>
+             {!smallMenu && <div className="hamb" onClick={handleSmallMenu}>
+                </div>}
+            <Logo />
+            <nav className = "main-nav">
+                <MenuItems />
+            </nav>
+            <nav onClick={handleSmallMenu} className={`small-menu ${smallMenu ? 'open' : null }`}>
+                <button>x</button>
+                <MenuItems />
+            </nav>            
+        </header>
     );
 }
 

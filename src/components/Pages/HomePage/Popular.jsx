@@ -6,8 +6,16 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import PopularCard from './PopularCard';
+import { useState,useEffect } from 'react';
+
 
 const Popular = ({places})=>{
+  const[slides,setSlides] = useState(1.5);
+
+  useEffect(()=>{
+    const width = window.innerWidth;
+      setSlides(width < 550 ? .8 : 1.5 );
+  },[]);
 
   return(
       <div id="popular-section">
@@ -16,10 +24,10 @@ const Popular = ({places})=>{
             // install Swiper modules
             modules={[Navigation, Pagination,Autoplay, A11y,EffectFade]}
             spaceBetween={0}
-            slidesPerView={1.5}
+            slidesPerView={slides}
             navigation
             autoplay={{delay:3000}}
-            centeredSlides = {true}
+            // centeredSlides = {true}
             centerInsufficientSlides = {true}
             onAutoplayResume = {true}
             slidesPerGroupAuto = {true}

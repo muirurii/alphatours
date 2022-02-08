@@ -13,6 +13,7 @@ const ContactsInfo = ()=>{
                     </ul>
                 </div>
             <form>
+             <div>
                 <div>
                     <input type="text" id="name" placeholder="Enter your name"/>
                 </div>
@@ -23,6 +24,7 @@ const ContactsInfo = ()=>{
                     <textarea id="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
                 </div>
                 <button type="submit">Send</button>
+             </div> 
             </form>
         </div>
     );

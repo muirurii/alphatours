@@ -21,7 +21,7 @@ const Destinations = ({places})=>{
                   <input type="text" placeholder="search destinations" value = {search} onChange = {handleSearch}/>
               </form>
           </div>
-        {placesArr.length ? placesArr.map(place=><Destination place={place} key={place.id}/>) : 'no des'}
+        {placesArr.length ? placesArr.map(place=><Destination place={place} key={place.id}/>) : <p className="user-message">No destination fit your search found</p>}
       </div>  
     )
 }
