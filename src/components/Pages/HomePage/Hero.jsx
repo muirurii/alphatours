@@ -13,11 +13,11 @@ const Hero = ({toDestinations})=>{
                   <Link to="/"><i className="fas fa-phone"></i></Link>
             </div>
             <div className="highlight">
-              <h3>
+              <h1>
                   EVERY DAY IS A CHANCE FOR YOU TO
                   TRAVEL AND EXPROLE THE 
                   WORLD'S BEAUTY.
-              </h3>
+              </h1>
               <p>
                   Alpha tours provides you with the best packages to satisfy your travel needs
                   and make awesome memories.

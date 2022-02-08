@@ -4,6 +4,7 @@ import Footer from './components/Layout/Footer'
 import HomePage from './components/Pages/HomePage/HomePage';
 import Destinations from './components/Pages/Destinations/Destinations';
 import DestinationDetails from './components/Pages/Destinations/DestinationDetails';
+import About from  './components/Pages/About/About';
 import ContactsPage from './components/Pages/Contacts/Contacts';
 import Booking from './components/Pages/Booking/Booking';
 import places from './utilities/places.js';
@@ -17,6 +18,7 @@ const App = ()=> {
         <Route path='/' element={<HomePage places={places}/>} />
         <Route path='/destinations/:category' element={<Destinations places={places}/>} />
         <Route path='/destination/:id' element={<DestinationDetails places={places}/>} />
+        <Route path='/about' element={<About />} />
         <Route path='/contacts' element={<ContactsPage />} />
         <Route path='/booking/:id' element={<Booking places={places}/>} />
       </Routes>

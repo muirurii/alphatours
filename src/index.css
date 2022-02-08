@@ -92,7 +92,8 @@ header {
     padding: 1.2em 1em;
     font-weight: bold;
     color: #fff;
-    border-bottom: 1px solid #022a44;
+    border-bottom: 3px solid #022a44;
+    border-radius:4px;
 }
 
 .main-nav .list>li:hover {
@@ -104,7 +105,7 @@ header {
 /* footer */
 
 footer {
-    min-height: 30vh;
+    min-height: 50vh;
     background-color: #8dc2c2;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -212,8 +213,8 @@ footer li:hover {
     padding-top: 80px;
 }
 
-.highlight h3 {
-    font-size: 2rem;
+.highlight h1 {
+    font:bold 2rem;
     color: #022a44;
     max-width: 500px;
 }
@@ -221,7 +222,7 @@ footer li:hover {
 .hero-text {
     position: relative;
     background-color: #8dc2c25b;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(1px);
     min-height: calc(100vh - 80px);
     padding: 0 2em;
     display: flex;
@@ -415,12 +416,14 @@ footer li:hover {
 .buttons {
     margin-top: 2em;
 }
-
+.buttons button{
+    padding:.8em 3em;
+}
 .buttons button:last-child {
     background-color: #fff;
     color: #000;
     border: #022a44 solid 1px;
-    transform: translateX(10px);
+    transform: translateX(30px);
 }
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
@@ -585,8 +588,43 @@ select-pure {
 .booking button:hover {
     opacity: .95;
 }
+/* About */
+.about{
+    padding:90px 6em 4em 6em;
 
+}
+.about h1{
+    text-align:center;
+}
+.testimonials{
+    background-color:#fff;
+}
+.testimonials>div{
+    position: relative;
+    height: 500px;
+    width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
 
+.testimonial {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    min-height: calc(300px - 3rem);
+    padding: 1em 2em;
+    background-color: #fff;
+    transform: scale(0) translate(50%,50%);
+    transition: 1s linear;
+    border-radius:10px;
+}
+
+.testimonial.active {
+    transform: scale(1);
+    z-index: 2;
+    background-color: #8dc2c25b;
+    transform-origin:top;
+}
 /* contacts */
 
 .contacts {
@@ -594,7 +632,7 @@ select-pure {
     background-color: #8dc2c25b;
 }
 
-.contacts h1 {
+.contacts h1,.testimonials h1 {
     text-align: center;
 }
 
@@ -607,12 +645,16 @@ select-pure {
 .contacts-info form {
     padding: 2em;
 }
-
+.contacts-info label{
+    font-weight:bold;
+}
 .contacts-info>div {
     display: flex;
     justify-content: center;
 }
-
+.contacts-info li:hover{
+    text-decoration:underline;
+}
 .contacts input,
 .contacts textarea {
     width: 50%;
@@ -628,30 +670,4 @@ select-pure {
 .contacts button {
     background-color: #022a44;
     color: #fff;
-}
-.testimonials{
-    background-color:#fff;
-}
-.testimonials>div{
-    position: relative;
-    height: 500px;
-    max-width: 320px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.testimonial {
-    position: absolute;
-    top: 3rem;
-    left: 0;
-    height: calc(500px - 3rem);
-    background-color: #fff;
-    transform: translateX(-100%);
-    transition: 1s linear;
-}
-
-.testimonial.active {
-    transform: translateX(0%);
-    z-index: 2;
-    background-color: #8dc2c293;
 }
