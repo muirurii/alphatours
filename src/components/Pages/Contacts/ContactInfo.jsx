@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom';
+import 'select-pure';
 
 const ContactsInfo = ()=>{
     return(
@@ -12,16 +13,25 @@ const ContactsInfo = ()=>{
                         <li><Link to=""><i className="fab fa-twitter"></i><label>Twitter</label> - @alphatours</Link></li>
                     </ul>
                 </div>
-            <form>
+            <form onSubmit = {(e)=> e.preventDefault()}>
              <div>
                 <div>
-                    <input type="text" id="name" placeholder="Enter your name"/>
+                    <input type="text" id="name" placeholder="Enter your name" required/>
                 </div>
                 <div>
-                    <input type="email" id="email" placeholder="Enter your email"/>
+                    <input type="email" id="email" placeholder="Enter your email" required/>
                 </div>
+                <select-pure name="country" required>
+                    <option-pure value="" disabled hidden>-- Subject of your message --</option-pure>
+                    <option-pure value="1">I need help in booking</option-pure>
+                    <option-pure value="2">Confirm tour data</option-pure>
+                    <option-pure value="3">Request location visit</option-pure>
+                    <option-pure value="4">Query on payments</option-pure>
+                    <option-pure value="5">Feedback</option-pure>
+                    <option-pure value="other">Other - specify below</option-pure>
+                  </select-pure>
                 <div>
-                    <textarea id="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
+                    <textarea id="message" cols="30" rows="10" placeholder="Enter your message" required></textarea>
                 </div>
                 <button type="submit">Send</button>
              </div> 

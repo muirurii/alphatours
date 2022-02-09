@@ -261,6 +261,10 @@ footer>div:last-child p {
     margin-top: 3em;
 }
 
+.foot-socials {
+    display: flex;
+}
+
 .foot-socials li {
     padding-left: 0;
 }
@@ -558,30 +562,6 @@ footer i {
     border-radius: 35px;
 }
 
-select-pure {
-    --select-height: 44px;
-    --select-width: 100%;
-    --border-radius: 4px;
-    --border-width: 1px;
-    --border-color: var(--mainBlue);
-    --padding: 0 10px;
-    --dropdown-z-index: 2;
-    --disabled-background-color: #bdc3c7;
-    --disabled-color: #ecf0f1;
-    --background-color: #fff;
-    --color: #022a44;
-    --hover-background-color: #8dc2c25b;
-    --hover-color: #000;
-    --selected-background-color: #8dc2c25b;
-    --selected-color: #000;
-    --dropdown-gap: 0;
-    --font-size: 14px;
-    --font-family: inherit;
-    --font-weight: 400;
-    --select-outline: 2px solid #e3e3e3;
-    --dropdown-items: 6;
-}
-
 .destination {
     background-size: 100% 100%;
 }
@@ -699,6 +679,7 @@ select-pure {
     position: relative;
     height: 500px;
     width: 90%;
+    padding-top: 2em;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -754,6 +735,7 @@ select-pure {
 
 .contacts i {
     color: var(--orange);
+    padding-right: 1em;
 }
 
 .contacts-info li:hover {
@@ -769,7 +751,35 @@ select-pure {
 
 .contacts input {
     height: 40px;
-    margin-bottom: .5em;
+    margin: .5em 0;
+}
+
+.contacts textarea {
+    margin-top: 1em;
+}
+
+select-pure {
+    --select-height: 44px;
+    --select-width: 90%;
+    --border-radius: 4px;
+    --border-width: 1px;
+    --border-color: var(--mainBlue);
+    --padding: 0 10px;
+    --dropdown-z-index: 2;
+    --disabled-background-color: #bdc3c7;
+    --disabled-color: #ecf0f1;
+    --background-color: #fff;
+    --color: var(--mainBlue);
+    --hover-background-color: #def7f7f6;
+    --selected-background-color: var(--blueLight);
+    --selected-color: var(--mainBlue);
+    --dropdown-gap: 0;
+    --font-size: 14px;
+    --font-family: inherit;
+    --font-weight: 400;
+    --select-outline: 1px solid var(--mainBlue);
+    --dropdown-items: 6;
+    margin-bottom: 2em;
 }
 
 .contacts button {
@@ -781,6 +791,11 @@ select-pure {
     .align-left {
         width: 300px;
         margin: 0 auto;
+        padding: 0 2em;
+    }
+    .cta {
+        margin-left: 2em;
+        color: red;
     }
     .about {
         padding: 110px 4em 4em 4em;
@@ -795,6 +810,9 @@ select-pure {
     .contacts input,
     .contacts textarea {
         width: 70%;
+    }
+    select-pure {
+        --select-width: 70%;
     }
 }
 

@@ -1,7 +1,5 @@
 import { useParams } from "react-router";
 import {useState} from 'react';
-import 'select-pure';
-
 
 const Booking = ({places})=>{
 
@@ -58,16 +56,8 @@ const Booking = ({places})=>{
                 </div>
                 <div>
                     <label htmlFor="slots">Slots</label>
-                    <select-pure name="country" id="slots" value={slots} onChange={changeSlots}>
-                    {/* <option-pure value="" disabled hidden>-- Please select a country --</option-pure> */}
-                    <option-pure value="1">1 slot</option-pure>
-                    <option-pure value="2">Two slots</option-pure>
-                    <option-pure value="3">Three slots</option-pure>
-                    <option-pure value="4">Four slots</option-pure>
-                    <option-pure value="6">Five slots</option-pure>
-                    <option-pure value="more">More than five - specify below</option-pure>
-                  </select-pure>
-                    {/* <input type="number" min={1} id="slots" placeholder="how many slots?"  required/> */}
+                   
+                    <input type="number" min={1} id="slots"  value={slots} onChange={changeSlots} placeholder="how many slots?"  required/>
                 </div>
                 <div>
                     <label htmlFor="info">Additional info</label>

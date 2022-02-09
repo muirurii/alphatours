@@ -35,7 +35,7 @@ const Popular = ({places})=>{
             effect = "cube"
             >
                 
-                {places.map(place=><SwiperSlide className='popular' key={place.id} style={{"backgroundImage":`url(${place.background})`}}>
+                {places.slice(0,5).map(place=><SwiperSlide className='popular' key={place.id} style={{"backgroundImage":`url(${place.background})`}}>
                     <PopularCard place={place}/>
                 </SwiperSlide>)}
         </Swiper>

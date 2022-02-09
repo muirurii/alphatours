@@ -15,7 +15,7 @@ const App = ()=> {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path='/' element={<HomePage places={places}/>} />
+        <Route path='/alphatours' element={<HomePage places={places}/>} />
         <Route path='/destinations/:category' element={<Destinations places={places}/>} />
         <Route path='/destination/:id' element={<DestinationDetails places={places}/>} />
         <Route path='/about' element={<About />} />

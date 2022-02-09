@@ -1,6 +1,7 @@
 import Logo from './Logo';
 import MenuItems from './MenuItems';
-import { useState,useRef } from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = ()=>{
     const[smallMenu,setSmallMenu] = useState(false);
@@ -8,13 +9,13 @@ const Header = ()=>{
     const handleSmallMenu = ()=>{
         setSmallMenu(!smallMenu);
     }
-    const m = useRef()
-    console.log(m.current);
     return (
-         <header ref={m}>
+         <header>
              {!smallMenu && <div className="hamb" onClick={handleSmallMenu}>
                 </div>}
-            <Logo />
+            <Link to={"/alphatours"}>
+                <Logo />
+            </Link>
             <nav className = "main-nav">
                 <MenuItems />
             </nav>

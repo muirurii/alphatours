@@ -9,7 +9,7 @@ const Footer = ()=>{
             <div>
                <h2>Quick Links</h2>
                 <ul>
-                    <li><Link to="/#">Home</Link></li>
+                    <li><Link to="/alphatours#">Home</Link></li>
                     <li><Link to="/destinations/wildlife">Wildlife tour</Link></li>
                     <li><Link to="/destinations/mountain">Mountain climbing</Link></li>
                     <li><Link to="/destinations/adventure">Adventure</Link></li>
