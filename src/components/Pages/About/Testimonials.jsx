@@ -8,7 +8,7 @@ const Testimonials = ()=>{
         console.log(activeIndex);
         setActiveIndex(activeIndex >= 3 ? 0 : activeIndex+1);
         clearInterval(int);
-    },4000);
+    },6000);
 
     return(
         <div className="testimonials">
@@ -18,7 +18,8 @@ const Testimonials = ()=>{
                     return(
                      <div className={`testimonial ${activeIndex === index ? 'active' : null}`}  key={index}>
                             <h2>Customer {index+1}</h2>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga natus ab minus quidem voluptatum qui nulla enim commodi blanditiis vitae ad itaque dolores iste, laboriosam quae exercitationem aspernatur, aliquam omnis.
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga natus ab mionem aspernatur, aliquam omnis.inus quidem voluptatum qui nulla enim commodi blanditiis vitae ad itaque dolores iste, laboriosam quae exercitat
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga natus ab mionem aspernatur, aliquam omnis.inus quidem voluptatum qui nulla enim commodi blanditiis vitae ad itaque dolores iste, laboriosam quae exercitat
                      </div>
                     )
                 })}

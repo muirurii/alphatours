@@ -33,14 +33,24 @@ button {
     outline: none;
 }
 
+button:hover {
+    opacity: .95;
+}
+
+:root {
+    --orange: #c91f01;
+    --mainBlue: #00090a;
+    --blueLight: #8dc2c2b7;
+}
+
 body {
     font-family: 'Poppins', serif;
     overflow-x: hidden;
 }
 
 h1 {
-    font-family: 'Quintessential', serif;
-    color: #022a44;
+    font-family: 'Righteous', serif;
+    color: var(--orange);
 }
 
 html {
@@ -52,8 +62,8 @@ header {
     width: 100vw;
     top: 0;
     left: 0;
-    height: 80px;
-    background-color: #022a44;
+    height: 90px;
+    background-color: var(--mainBlue);
     z-index: 100;
 }
 
@@ -67,10 +77,6 @@ header {
     height: 2rem;
     width: 2rem;
     margin-right: .4em;
-}
-
-.logo h1 {
-    color: #fff;
 }
 
 .main-nav {
@@ -93,13 +99,13 @@ header {
     padding: 1.2em 1em;
     font-weight: bold;
     color: #fff;
-    border-bottom: 3px solid #022a44;
+    border-bottom: 8px solid var(--mainBlue);
     border-radius: 4px;
 }
 
 .main-nav .list>li:hover {
     background-color: #fff;
-    color: #022a44;
+    color: var(--orange);
 }
 
 .main-nav .dest {
@@ -124,7 +130,7 @@ header {
     display: block;
     width: 200px;
     background-color: #fff;
-    border: 1px solid #8dc2c2;
+    border: 1px solid var(--blueLight);
     border-radius: 3px;
     font-weight: normal;
     position: absolute;
@@ -134,7 +140,7 @@ header {
 }
 
 .main-nav .dest:hover .more {
-    animation: more 200ms linear forwards;
+    animation: more 300ms linear forwards;
 }
 
 @keyframes more {
@@ -144,12 +150,12 @@ header {
 }
 
 .main-nav .more li {
-    color: #022a44;
+    color: var(--mainBlue);
     padding: .5em;
 }
 
 .main-nav .more li:hover {
-    background-color: #8dc2c2;
+    background-color: var(--blueLight);
 }
 
 .hamb {
@@ -208,7 +214,7 @@ header {
 }
 
 .small-menu a:hover {
-    background-color: #8dc2c2;
+    background-color: var(--blueLight);
 }
 
 .small-menu span {
@@ -218,7 +224,7 @@ header {
 .small-menu button {
     padding: .5em .6em;
     border-radius: 0;
-    background-color: #8dc2c2;
+    background-color: var(--blueLight);
     color: #ff0000;
     position: absolute;
     top: 0;
@@ -231,21 +237,32 @@ header {
 
 footer {
     min-height: 50vh;
-    background-color: #8dc2c2;
-    place-items: center;
+    background-color: var(--blueLight);
     padding: 1em 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
 }
 
 footer .logo {
     padding: 0;
 }
 
-footer div {
+footer>div {
     width: 300px;
 }
 
-footer div:last-child ul {
-    display: flex;
+footer h2 {
+    color: var(--orange);
+}
+
+footer>div:last-child p {
+    margin-top: 3em;
+}
+
+.foot-socials li {
+    padding-left: 0;
 }
 
 footer li {
@@ -256,17 +273,23 @@ footer li:hover {
     text-decoration: underline;
 }
 
+footer i {
+    color: var(--orange);
+    padding: .5em;
+    border-radius: 3px;
+}
+
 .trustees {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 2em;
 }
 
 .trustees img {
-    width: 80px;
-    height: 80px;
-    margin: 10px;
+    width: 60px;
+    height: 60px;
+    margin: 7px 7px 7px 0;
 }
 
 #root>div {
@@ -285,14 +308,13 @@ footer li:hover {
 
 .highlight h1 {
     font: bold 2rem;
-    color: #022a44;
     max-width: 500px;
 }
 
 .hero-text {
     position: relative;
-    background-color: #8dc2c25b;
-    backdrop-filter: blur(1px);
+    background-color: #080808d0;
+    backdrop-filter: blur(2px);
     min-height: calc(100vh - 80px);
     padding: 0 2em;
     display: flex;
@@ -311,7 +333,7 @@ footer li:hover {
 
 .cta {
     background-color: transparent;
-    color: #022a44;
+    color: var(--mainBlue);
     padding: 1.3em 3em;
     border-radius: 30px;
     margin-top: 3em;
@@ -335,10 +357,10 @@ footer li:hover {
 }
 
 .cta::after {
-    background-color: #8dc2c2;
+    background-color: var(--blueLight);
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform 700ms 200ms;
+    transition: transform 350ms 200ms;
     z-index: -1;
 }
 
@@ -348,7 +370,8 @@ footer li:hover {
 }
 
 .cta:hover {
-    color: #343434;
+    color: var(--orange);
+    opacity: 1;
 }
 
 .socials {
@@ -357,7 +380,7 @@ footer li:hover {
     bottom: 2em;
     display: flex;
     flex-direction: column;
-    color: #000;
+    color: #fff;
 }
 
 .socials i {
@@ -365,7 +388,7 @@ footer li:hover {
 }
 
 .socials i:hover {
-    color: #343434;
+    color: var(--blueLight);
     transform: translateX(1px);
 }
 
@@ -384,7 +407,8 @@ footer li:hover {
 .card {
     width: 310px;
     min-height: 350px;
-    background-color: #8dc2c2;
+    background-color: #fff;
+    border: 1px solid var(--mainBlue);
     padding: 1em;
     margin-bottom: 2em;
     position: relative;
@@ -394,15 +418,15 @@ footer li:hover {
 
 .card::after {
     position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    left: -1px;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
     content: '';
-    background-color: #022a44;
+    background-color: var(--mainBlue);
     border-radius: inherit;
     z-index: -1;
-    transform: rotateZ(1deg);
+    transform: rotateZ(2deg);
     transition: transform 300ms ease-in-out;
 }
 
@@ -420,7 +444,8 @@ footer li:hover {
 .card i {
     height: 60px;
     width: 60px;
-    background-color: #fff;
+    background-color: var(--orange);
+    color: #fff;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -428,17 +453,18 @@ footer li:hover {
 }
 
 .card h2 {
-    color: #022a44;
+    color: var(--orange);
 }
 
 .card p {
-    color: #022a44;
-    padding: 1em;
+    color: var(--mainBlue);
+    padding: 1em 1.2em;
+    font-weight: normal;
 }
 
 #services button,
 .popular button {
-    background-color: #022a44;
+    background-color: var(--mainBlue);
     color: #fff;
 }
 
@@ -459,17 +485,14 @@ footer li:hover {
 }
 
 .swiper-slide.swiper-slide.popular {
-    background-color: #8dc2c293;
+    background-color: #8dc2c2b7;
     background-blend-mode: lighten;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 390px;
+    height: 350px;
     border-radius: 4px;
     margin: 1em;
-    padding: 2em;
+    padding: 3em 2em 2em 3em;
 }
 
 .popular h2,
@@ -493,20 +516,20 @@ footer li:hover {
 
 .buttons button:last-child {
     background-color: #fff;
-    color: #000;
-    border: #022a44 solid 1px;
+    color: var(--mainBlue);
+    border: var(--mainBlue) solid 1px;
     transform: translateX(30px);
 }
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-    background-color: #022a44;
+    background-color: var(--mainBlue);
 }
 
 .swiper-button-next:after,
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
-    color: #022a44;
+    color: var(--mainBlue);
 }
 
 
@@ -531,7 +554,7 @@ footer li:hover {
     font-family: inherit;
     text-align: center;
     outline: none;
-    border: 1px solid #022a44;
+    border: 1px solid var(--mainBlue);
     border-radius: 35px;
 }
 
@@ -540,7 +563,7 @@ select-pure {
     --select-width: 100%;
     --border-radius: 4px;
     --border-width: 1px;
-    --border-color: #022a44;
+    --border-color: var(--mainBlue);
     --padding: 0 10px;
     --dropdown-z-index: 2;
     --disabled-background-color: #bdc3c7;
@@ -564,7 +587,7 @@ select-pure {
 }
 
 .description {
-    background-color: #8dc2c25b;
+    background-color: #3cd3d36c;
     backdrop-filter: blur(8px);
     padding: 1em;
 }
@@ -579,10 +602,15 @@ select-pure {
     font-size: 1.2rem;
 }
 
+.description i,
+.description h2 {
+    color: var(--orange);
+}
+
 .description h3 {
     font-size: 2rem;
     text-transform: capitalize;
-    color: #022a44;
+    color: var(--mainBlue);
 }
 
 .destination label {
@@ -591,31 +619,27 @@ select-pure {
 
 .description p {
     padding-top: 2em;
+    color: var(--mainBlue);
 }
 
 .destination .price {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #022a44;
+    color: var(--orange);
 }
 
 .destination button {
     display: block;
     margin-top: 2em;
-    background-color: #022a44;
+    background-color: var(--mainBlue);
     color: #fff;
-}
-
-.destination button:hover {
-    background-color: #022a44de;
 }
 
 
 /* Booking */
 
 .booking {
-    background-color: #8dc2c25b;
-    padding-top: 85px;
+    padding-top: 110px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -640,7 +664,7 @@ select-pure {
 .booking textarea {
     width: 50vw;
     padding-left: 2em;
-    border: 1px solid #022a44;
+    border: 1px solid var(--mainBlue);
 }
 
 .booking textarea {
@@ -652,19 +676,15 @@ select-pure {
 }
 
 .booking button {
-    background-color: #022a44;
+    background-color: var(--mainBlue);
     color: #fff;
-}
-
-.booking button:hover {
-    opacity: .95;
 }
 
 
 /* About */
 
 .about {
-    padding: 90px 2em 2em 2em;
+    padding: 105px 2em 2em 2em;
 }
 
 .about h1 {
@@ -690,24 +710,31 @@ select-pure {
     min-height: calc(300px - 3rem);
     padding: 1em 2em;
     background-color: #fff;
-    transform: scale(0) translate(50%, 50%);
-    transition: 1s linear;
+    clip-path: inset(0 100% 0 0);
+    border: 1px solid var(--mainBlue);
     border-radius: 10px;
+    color: var(--mainBlue);
+}
+
+.testimonial h2 {
+    color: var(--orange);
 }
 
 .testimonial.active {
-    transform: scale(1);
-    z-index: 2;
-    background-color: #8dc2c25b;
-    transform-origin: top;
+    animation: test 600ms linear forwards;
+}
+
+@keyframes test {
+    to {
+        clip-path: inset(0 0 0 0);
+    }
 }
 
 
 /* contacts */
 
 .contacts {
-    padding-top: 90px;
-    background-color: #8dc2c25b;
+    padding-top: 100px;
 }
 
 .contacts h1,
@@ -722,6 +749,11 @@ select-pure {
 
 .contacts-info label {
     font-weight: bold;
+    color: var(--mainBlue);
+}
+
+.contacts i {
+    color: var(--orange);
 }
 
 .contacts-info li:hover {
@@ -732,7 +764,7 @@ select-pure {
 .contacts textarea {
     width: 90%;
     padding-left: 1em;
-    border: 1px solid #022a44;
+    border: 1px solid var(--mainBlue);
 }
 
 .contacts input {
@@ -741,33 +773,17 @@ select-pure {
 }
 
 .contacts button {
-    background-color: #022a44;
+    background-color: var(--mainBlue);
     color: #fff;
 }
 
-@media (min-width:800px) {
-    .main-nav {
-        display: block;
-    }
-    .hamb {
-        display: none;
-    }
-    .small-menu {
-        display: none;
-    }
-}
-
 @media (min-width:650px) {
-    footer {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        padding: 0;
-    }
-    footer h1 {
-        text-align: center;
+    .align-left {
+        width: 300px;
+        margin: 0 auto;
     }
     .about {
-        padding: 90px 4em 4em 4em;
+        padding: 110px 4em 4em 4em;
     }
     .testimonials>div {
         width: 55%;
@@ -782,10 +798,29 @@ select-pure {
     }
 }
 
+@media (min-width:800px) {
+    .main-nav {
+        display: block;
+    }
+    .hamb {
+        display: none;
+    }
+    .small-menu {
+        display: none;
+    }
+    .swiper-slide.swiper-slide.popular {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2em;
+    }
+}
+
 @media (min-width:900px) {
     footer {
-        display: grid;
+        /* display: grid;
         grid-template-columns: repeat(3, 1fr);
+        place-items: center; */
     }
     .destination {
         display: grid;

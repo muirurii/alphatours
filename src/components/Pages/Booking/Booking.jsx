@@ -39,7 +39,7 @@ const Booking = ({places})=>{
         <div className="booking">
             <h1>Book a tour to {place.name}</h1>
             <div className="tour-info">
-                <h4><i className="fas fa-map-marker"></i> {place.country}</h4>
+                <h4><i className="fas fa-map-marker-alt"></i> {place.country}</h4>
                 <h4>Price - {place.price * +slots }$</h4>
                 <h4>Duration - {place.duration}</h4>
             </div>

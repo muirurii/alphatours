@@ -5,11 +5,11 @@ const ContactsInfo = ()=>{
         <div className = "contacts-info">
                 <div>
                     <ul>
-                        <li><Link to=""><label>Email</label> - alphatours@gmail.com</Link></li>
-                        <li><Link to=""><label>Phone</label> - </Link> +2547239383228</li>
-                        <li><Link to=""><label>Facebook</label> - @alphatours</Link></li>
-                        <li><Link to=""><label>Instagram</label> - @_alphatours</Link></li>
-                        <li><Link to=""><label>Twitter</label> - @alphatours</Link></li>
+                        <li><Link to=""><i className="fas fa-envelope"></i><label>Email</label> - alphatours@gmail.com</Link></li>
+                        <li><Link to=""><i className="fas fa-phone"></i><label>Phone</label> - </Link> +2547239383228</li>
+                        <li><Link to=""><i className="fab fa-facebook"></i><label>Facebook</label> - @alphatours</Link></li>
+                        <li><Link to=""><i className="fab fa-instagram"></i><label>Instagram</label> - @_alphatours</Link></li>
+                        <li><Link to=""><i className="fab fa-twitter"></i><label>Twitter</label> - @alphatours</Link></li>
                     </ul>
                 </div>
             <form>
