@@ -22,22 +22,36 @@ const Popular = ({places})=>{
         <h1>Popular Destinations</h1>
         <Swiper
             // install Swiper modules
-            modules={[Navigation, Pagination,Autoplay, A11y,EffectFade]}
-            spaceBetween={0}
-            slidesPerView={slides}
+            modules={[Navigation, Pagination,Autoplay]}
             navigation
             autoplay={{delay:3000}}
-            // centeredSlides = {true}
-            centerInsufficientSlides = {true}
+            breakpoints = {
+              // when window width is >= 320px
+              {
+              // when window width is >= 480px
+              480: {
+                slidesPerView: 1,
+                spaceBetween: 5
+              },
+              // when window width is >= 640px
+              640: {
+                slidesPerView: 3,
+                spaceBetween: 30
+              }}
+            }
             onAutoplayResume = {true}
-            slidesPerGroupAuto = {true}
             pagination={{ clickable: true }}
-            effect = "cube"
+            effect= 'flip'
+            flipEffect = {{
+              slideShadows: false
+            }
+            }
             >
-                
-                {places.slice(0,5).map(place=><SwiperSlide className='popular' key={place.id} style={{"backgroundImage":`url(${place.background})`}}>
-                    <PopularCard place={place}/>
-                </SwiperSlide>)}
+              {places.slice(0,5).map(place=>(
+               <SwiperSlide className='popular' key={place.id} style={{"backgroundImage":`url(${place.background})`}}>
+                  <PopularCard place={place}/>
+                </SwiperSlide>))
+              }
         </Swiper>
     </div>
   );

@@ -16,7 +16,6 @@ const HomePage= ({places}) =>{
         <Services toDestinations={toDestinations }/>
         <Popular places={places}/>
       </div>
-      
    );
 } 
 

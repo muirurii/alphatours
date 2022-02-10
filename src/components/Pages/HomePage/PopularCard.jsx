@@ -12,7 +12,7 @@ const PopularCard = ({place})=>{
     return(
         <div>
         <h2>{place.name}</h2>
-        <h3>Category - {place.category}</h3>
+        <h3 className='cat'>{place.category}</h3>
         <label>{place.price}$</label>
         <label>{place.duration}</label>
         <div className="buttons">

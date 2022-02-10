@@ -19,8 +19,8 @@ const Destination = ({place})=> {
             <div>
                 <label>Duration - {place.duration}</label>
             </div>
+            <label className="price">Costs - {place.price}$</label>
             <p>{place.description}</p>
-            <label className="price">Cost : {place.price}$</label>
             <button onClick={toBooking}>Book Trip</button>
         </div>
         </div>

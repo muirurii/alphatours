@@ -8,8 +8,7 @@ const DestinationDetails = ({places})=>{
        <div className="destinations">
            <Destination place={place}/>
        </div>
-   )
-    
+   );
 }
 
 export default DestinationDetails;
