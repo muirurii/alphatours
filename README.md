@@ -1,4 +1,4 @@
-([Live],"https://muirurii.github.io/alphatours")
+Live Site - "https://muirurii.github.io/alphatours"
 
 # Getting Started with Create React App
 
