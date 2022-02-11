@@ -466,6 +466,7 @@ footer i {
 
 #popular-section h1 {
     text-align: center;
+    padding-bottom: 2em;
 }
 
 #popular-section {
@@ -819,7 +820,7 @@ select-pure {
         border: 1px solid var(--mainBlue);
     }
     select-pure {
-        --select-width: 70%;
+        --select-width: 50vw;
     }
 }
 
