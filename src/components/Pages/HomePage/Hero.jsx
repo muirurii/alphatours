@@ -1,21 +1,21 @@
-const Hero = ({toDestinations})=>{
+import { Link } from "react-router-dom";
+
+const Hero = ()=>{
     return(
-      <div className="hero-bg">
-        <div className="hero-text">
+        <div className="hero-text center">
             <div className="highlight">
               <h1>
                   EVERY DAY IS A CHANCE FOR YOU TO
                   TRAVEL AND EXPROLE THE 
                   WORLD'S BEAUTY.
               </h1>
-              <p>
-                  Alpha tours provides you with the best packages to satisfy your travel needs
-                  and make awesome memories.
-              </p>
-              <button className="cta" onClick={toDestinations}>View Destinations</button>
+              <h3>
+                  Alpha tours is a top rated travel agency offering epic worldwide destinations with the best packages to satisfy your travel needs.
+                  Travel with us and let us make awesome memories together.
+              </h3>
+              <Link className="cta block" to={"/destinations/all"}>View Destinations</Link>
             </div>
         </div>
-      </div> 
     );
 }
 

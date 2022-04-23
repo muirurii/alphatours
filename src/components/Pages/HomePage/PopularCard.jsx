@@ -1,23 +1,16 @@
-import {useNavigate} from 'react-router-dom';
+import { Link } from "react-router-dom";
+
 
 const PopularCard = ({place})=>{
-    const navigate = useNavigate();
-    const toBooking = ()=>{
-        navigate(`/booking/${place.id}`)
-    }
-    const toDestination = ()=>{
-        navigate(`/destination/${place.id}`)
-    }
 
     return(
-        <div>
-        <h2>{place.name}</h2>
-        <h3 className='cat'>{place.category}</h3>
-        <label>{place.price}$</label>
-        <label>{place.duration}</label>
-        <div className="buttons">
-            <button onClick={toBooking}>Book Tour</button>
-            <button onClick={toDestination}>More</button>
+        <div className={'popular-card'}>
+        <h3>{place.name}</h3>
+        <h4 className='category'>{place.category}</h4>
+        <img src={place.background} alt={`${place.name}`} />
+        <div className="links center">
+            <Link to={`/booking/${place.id}`} className={'link-orange link'}>Book tour</Link>
+            <Link to={`/destination/${place.id}`} className={'link-blue link'}>View details</Link>
         </div>
     </div>
     );

@@ -22,7 +22,7 @@ const Popular = ({places})=>{
               // when window width is >= 480px
               480: {
                 slidesPerView: 1,
-                spaceBetween: 5
+                spaceBetween: 10
               },
               // when window width is >= 640px
               640: {
@@ -30,7 +30,7 @@ const Popular = ({places})=>{
                 spaceBetween: 30
               },
               980: {
-                slidesPerView: 3,
+                slidesPerView: 4,
                 spaceBetween: 30
               }
             }
@@ -38,8 +38,8 @@ const Popular = ({places})=>{
             onAutoplayResume = {true}
             pagination={{ clickable: true }}
             >
-              {places.slice(0,5).map(place=>(
-               <SwiperSlide className='popular' key={place.id} style={{"backgroundImage":`url(${place.background})`}}>
+              {places.slice(0,6).map(place=>(
+               <SwiperSlide className='popular' key={place.id}>
                   <PopularCard place={place}/>
                 </SwiperSlide>))
               }

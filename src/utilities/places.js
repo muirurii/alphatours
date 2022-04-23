@@ -25,7 +25,7 @@ const places = [{
         level: 'Average',
     },
     {
-        name: "Snow fields",
+        name: "canada snow fields",
         id: getId(),
         country: "Canada",
         description: "Maasai Mara, also sometimes spelled Masai Mara and locally known simply as The Mara, is a large national game reserve in Narok, Kenya, contiguous with the Serengeti National Park in Tanzania. It is named in honor of the Maasai people, the ancestral inhabitants of the area, who migrated to the area from the Nile Basin. Their description of the area when looked at from afar: 'Mara' means 'spotted' in the local Maasai language, due to the many short bushy trees which dot the landscape. Maasai Mara is one of the most famous and important wildlife conservation and wilderness areas in Africa, world-renowned for its exceptional populations of lion, African leopard, cheetah and African bush elephant. It also hosts the Great Migration, which secured it as one of the Seven Natural Wonders of Africa, and as one of the ten Wonders of the World.",
@@ -36,7 +36,7 @@ const places = [{
         level: 'High',
     },
     {
-        name: "Caves",
+        name: "Vietnam Caves",
         id: getId(),
         country: "Vietnam",
         description: "Maasai Mara, also sometimes spelled Masai Mara and locally known simply as The Mara, is a large national game reserve in Narok, Kenya, contiguous with the Serengeti National Park in Tanzania. It is named in honor of the Maasai people, the ancestral inhabitants of the area, who migrated to the area from the Nile Basin. Their description of the area when looked at from afar: 'Mara' means 'spotted' in the local Maasai language, due to the many short bushy trees which dot the landscape. Maasai Mara is one of the most famous and important wildlife conservation and wilderness areas in Africa, world-renowned for its exceptional populations of lion, African leopard, cheetah and African bush elephant. It also hosts the Great Migration, which secured it as one of the Seven Natural Wonders of Africa, and as one of the ten Wonders of the World.",

@@ -1,12 +1,8 @@
-import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 const Destination = ({place})=> {
     window.scrollTo(0,0);
-    const navigate = useNavigate();
 
-    const toBooking = ()=>{
-        navigate(`/booking/${place.id}`);
-    }
     return ( 
         <div className="destination" style={{"backgroundImage":`url(${place.background})`}}>
         <div className="description">
@@ -21,7 +17,7 @@ const Destination = ({place})=> {
             </div>
             <label className="price">Costs - {place.price}$</label>
             <p>{place.description}</p>
-            <button onClick={toBooking}>Book Trip</button>
+            <Link to={`/booking/${place.id}`}className ="to-booking">Book Trip</Link>
         </div>
         </div>
      );

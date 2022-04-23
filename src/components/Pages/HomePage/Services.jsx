@@ -1,37 +1,15 @@
-const Services = ({toDestinations})=>{
+import { Link } from 'react-router-dom';
+import {services} from '../../../utilities/services'
+import ServiceCard from './ServiceCard';
+
+const Services = ()=>{
     return(
         <div id="services">
             <h1>What we offer</h1>
             <div className="service-cards">
-                <div className="card">
-                    <div>
-                        <i className="fas fa-user-lock"></i>
-                        <h2>Private Tours</h2>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dignissimos modi ipsum aspernatur similique amet, magni quia, accusantium sed veritatis deleniti sit laborum.
-                    </p>
-                </div>
-                <div className="card">
-                    <div>
-                        <i className="fas fa-star"></i>
-                        <h2>Apex Services</h2>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dignissimos modi ipsum aspernatur similique amet, magni quia, accusantium sed veritatis deleniti sit laborum.
-                    </p>
-                </div>
-                <div className="card">
-                    <div>
-                        <i className="fas fa-money-bill-wave"></i>
-                        <h2>Affordable Packages</h2>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dignissimos modi ipsum aspernatur similique amet, magni quia, accusantium sed veritatis deleniti sit laborum.
-                    </p>
-                </div>
+              {services.map((service,id)=> <ServiceCard key={id} service={service}/>)}
             </div>
-            <button onClick={toDestinations}>Views Tours</button>
+            <Link className='link-orange link' to={"/destinations/all"}>View Destinations</Link>
         </div>
     );
 }
