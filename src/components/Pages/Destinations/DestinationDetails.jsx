@@ -6,7 +6,7 @@ const DestinationDetails = ({places})=>{
     const place = places.find(place => place.id === +id);
    return(
        <div className="destinations">
-           <Destination place={place}/>
+           <Destination place={place} index={''}/>
        </div>
    );
 }

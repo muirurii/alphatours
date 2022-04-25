@@ -25,6 +25,7 @@ const ContactsInfo = ()=>{
                     <option-pure value="5">Feedback</option-pure>
                     <option-pure value="other">Other - specify below</option-pure>
                   </select-pure>
+                  <input type="hidden" name="country" onChange={()=>console.log(2)}/>
                 <div>
                     <textarea id="message" cols="30" rows="10" placeholder="Enter your message" required></textarea>
                 </div>

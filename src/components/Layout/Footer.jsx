@@ -1,6 +1,5 @@
 import SocialMedia from '../Pages/Contacts/SocialMedia';
 import { Link } from 'react-router-dom';
-import logo from '../../utilities/logo.png';
 
 const Footer = ()=>{
     return(
@@ -24,9 +23,9 @@ const Footer = ()=>{
             <div className='awards'>
                 <h3>Awards</h3>
                 <div className="trustees">
-                    <img src={logo} alt="logo" />
-                    <img src={logo} alt="logo" />
-                    <img src={logo} alt="logo" />
+                    <i className="fas fa-medal"></i>
+                    <i className="fas fa-medal"></i>
+                    <i className="fas fa-medal"></i>
                 </div>
             </div>
             <div className='lower-footer center'>

@@ -30,7 +30,7 @@ const Popular = ({places})=>{
                 spaceBetween: 30
               },
               980: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 30
               }
             }

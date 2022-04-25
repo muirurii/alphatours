@@ -6,7 +6,7 @@ const ServiceCard = ({service}) =>{
             <div>
                 <i className={`${service.icon} center`}></i>
             </div>
-            <h3>{service.title}</h3>
+            <h3 className="capitalize">{service.title}</h3>
             <p>{service.text}</p>
         </div>
     );
