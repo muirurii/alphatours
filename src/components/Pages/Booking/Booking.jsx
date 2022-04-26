@@ -1,9 +1,11 @@
 import { useParams } from "react-router";
 import {useState} from 'react';
+import useScrollToTop from '../../../customHooks/useScroll'
 
 const Booking = ({places})=>{
 
-    window.scrollTo(0,0);
+    useScrollToTop();
+        
     const {id} = useParams();
     const place = places.filter(place => place.id === +id)[0];
 

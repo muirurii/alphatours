@@ -22,10 +22,16 @@ const Footer = ()=>{
             </div>
             <div className='awards'>
                 <h3>Awards</h3>
-                <div className="trustees">
-                    <i className="fas fa-medal"></i>
-                    <i className="fas fa-medal"></i>
-                    <i className="fas fa-medal"></i>
+                <div className="medals">
+                    <div className="center">
+                        <i className="fas fa-medal"></i>
+                    </div>
+                    <div className="center">
+                        <i className="fas fa-medal"></i>
+                    </div>
+                    <div className="center">
+                        <i className="fas fa-medal"></i>
+                    </div>
                 </div>
             </div>
             <div className='lower-footer center'>

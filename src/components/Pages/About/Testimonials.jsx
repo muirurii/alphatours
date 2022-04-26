@@ -5,7 +5,6 @@ const Testimonials = ()=>{
     const [activeIndex,setActiveIndex] = useState(0);
 
     const int = setInterval(()=>{
-        console.log(activeIndex);
         setActiveIndex(activeIndex >= 3 ? 0 : activeIndex+1);
         clearInterval(int);
     },6000);

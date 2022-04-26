@@ -1,9 +1,11 @@
 import Destination from "./Destination";
 import { useParams } from "react-router";
 import {useState} from 'react';
+import useScrollToTop from "../../../customHooks/useScroll";
 
 const Destinations = ({places})=>{
-  window.scrollTo(0,0);
+
+  useScrollToTop();
 
   const[search,setSearch] = useState('');
   const handleSearch = (e)=>{

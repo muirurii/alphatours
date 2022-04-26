@@ -15,7 +15,7 @@ const Hero = ()=>{
                   Travel with us and let us make awesome memories together.
               </h4>
               <Link className="cta center" to={"/destinations/all"}>
-                  <span>View Destinations</span>
+                  <span>Get Started</span>
                   <i className="fas fa-arrow-right"></i>
                   </Link>
             </div>

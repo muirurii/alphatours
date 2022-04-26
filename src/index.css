@@ -4,7 +4,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* outline: 1px solid red; */
 }
 
 
@@ -41,7 +40,6 @@ button {
 :root {
     --orange: #c91f01;
     --mainBlue: #00090a;
-    --blueLight: #8dc2c2b7;
 }
 
 html::-webkit-scrollbar {
@@ -114,7 +112,7 @@ header {
     width: 30px;
     height: 4px;
     position: absolute;
-    right: 2em;
+    right: 1em;
     bottom: .5em;
     cursor: pointer;
     z-index: 300;
@@ -143,8 +141,8 @@ header {
     top: 100%;
     width: calc(100vw - 2em);
     height: 100vh;
-    padding: 2em 1em;
-    background-color: #fff;
+    padding: 2em;
+    background-color: var(--mainBlue);
     transform: translateX(110vw);
     transition: 300ms linear;
     pointer-events: none;
@@ -158,33 +156,27 @@ header {
     text-transform: uppercase;
     line-height: 1.5;
     pointer-events: all;
+    color: #fff;
 }
 
 .small-menu a {
     display: block;
 }
 
-.small-menu a:hover {
-    background-color: var(--blueLight);
-}
-
-.small-menu span {
+.small-menu span,
+.small-menu i {
     display: none;
 }
 
 .small-menu button {
     padding: .5em .6em;
     border-radius: 0;
-    background-color: var(--blueLight);
+    background-color: var(--mainBlue);
     color: #ff0000;
     position: absolute;
     top: 0;
-    left: -1.6em;
+    left: 0;
     pointer-events: all;
-}
-
-#root>div {
-    padding-bottom: 2em;
 }
 
 .highlight h1 {
@@ -241,7 +233,7 @@ header {
 
 .cta:hover {
     background-color: transparent;
-    border: 1px solid var(--orange);
+    border-color: var(--orange);
     color: var(--mainBlue);
 }
 
@@ -267,7 +259,7 @@ header {
     background-color: #fff;
     border: 1px solid var(--mainBlue);
     padding: 3em 2em 2em 2em;
-    margin-bottom: 7em;
+    margin-bottom: 4em;
     position: relative;
     border-radius: 4px;
     cursor: pointer;
@@ -318,7 +310,7 @@ header {
 #services a {
     display: block;
     width: fit-content;
-    margin: 2em auto;
+    margin: 0 auto;
 }
 
 
@@ -430,20 +422,16 @@ footer li:hover {
     text-decoration: underline;
 }
 
-.awards h3 {
-    text-align: center;
-}
-
-.trustees {
+.medals {
+    height: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.trustees img {
-    width: 60px;
-    height: 60px;
-    margin: 7px 7px 7px 0;
+.medals i {
+    transform: scale(3);
+    color: goldenrod;
 }
 
 .lower-footer {
@@ -452,8 +440,8 @@ footer li:hover {
     left: 0;
     right: 0;
     height: 2.7em;
-    background-color: #343434;
-    color: var(--blueLight);
+    background-color: var(--mainBlue);
+    color: var(--orange);
 }
 
 
@@ -465,7 +453,7 @@ footer li:hover {
 
 .destinations h1 {
     text-align: center;
-    padding: 1em 0;
+    padding-bottom: 1em;
 }
 
 .search-bar {
@@ -561,6 +549,8 @@ footer li:hover {
 }
 
 .orange {
+    display: block;
+    margin-top: 1em;
     color: var(--orange);
 }
 
@@ -568,7 +558,7 @@ footer li:hover {
 /* Booking */
 
 .booking {
-    padding-top: 110px;
+    padding: 110px 0 2em 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -605,19 +595,33 @@ footer li:hover {
 }
 
 .booking button {
-    background-color: var(--mainBlue);
-    color: #fff;
+    margin-top: 1em;
+    padding: 1.3em 4em;
 }
 
 
 /* About */
 
 .about {
-    padding: 105px 2em 2em 2em;
+    padding: 110px 1em 0 1em;
 }
 
 .about h1 {
     text-align: center;
+}
+
+.text {
+    padding: 1em 1em;
+}
+
+.text p {
+    max-width: 600px;
+    margin: 0 auto;
+    text-indent: 4em;
+}
+
+.text p:last-child {
+    margin-top: 1em;
 }
 
 .testimonials {
@@ -626,21 +630,22 @@ footer li:hover {
 
 .testimonials>div {
     position: relative;
-    height: 500px;
-    width: 90%;
+    height: 380px;
     padding-top: 2em;
-    margin: 0 auto;
     overflow: hidden;
 }
 
 .testimonial {
     position: absolute;
-    top: 3rem;
-    left: 0;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
     min-height: calc(300px - 3rem);
-    padding: 1em 2em;
+    width: calc(100% - 2em);
+    padding: 1em;
     background-color: #fff;
     clip-path: inset(0 100% 0 0);
+    display: none;
     border: 1px solid var(--mainBlue);
     border-radius: 10px;
     color: var(--mainBlue);
@@ -648,9 +653,11 @@ footer li:hover {
 
 .testimonial h2 {
     color: var(--orange);
+    padding-bottom: .5em;
 }
 
 .testimonial.active {
+    display: block;
     animation: test 600ms linear forwards;
 }
 
@@ -682,6 +689,11 @@ footer li:hover {
 .contacts-info>div,
 .contacts-info form {
     padding: 2em;
+}
+
+.contacts h3 {
+    color: var(--orange);
+    padding-bottom: 1em;
 }
 
 .contacts-info label {
@@ -727,7 +739,7 @@ select-pure {
     --background-color: #fff;
     --color: var(--mainBlue);
     --hover-background-color: #def7f7f6;
-    --selected-background-color: var(--blueLight);
+    --selected-background-color: #ccc;
     --selected-color: var(--mainBlue);
     --dropdown-gap: 0;
     --font-size: 14px;
@@ -753,10 +765,7 @@ select-pure {
     .destination img {
         max-width: 600px;
     }
-    .about {
-        padding: 110px 4em 4em 4em;
-    }
-    .testimonials>div {
+    .testimonial {
         width: 55%;
     }
     .contacts input,
@@ -797,23 +806,23 @@ select-pure {
     .dest:hover>span {
         color: var(--orange);
     }
-    .main-nav .dest {
+    .dest {
         position: relative;
         cursor: pointer;
         margin-right: 4px;
     }
-    .main-nav .dest i {
+    .dest i {
         position: absolute;
         top: 3px;
         right: -3px;
         transform: scale(.7, .9);
         transition: transform 300ms linear;
-        color: inherit;
     }
-    .main-nav .dest:hover>i {
+    .dest:hover>i {
         transform: rotateZ(180deg) scale(.7, .9);
+        color: var(--orange);
     }
-    .main-nav .dest .more {
+    .dest .more {
         display: block;
         width: 200px;
         background-color: #fff;
@@ -824,7 +833,7 @@ select-pure {
         left: .8em;
         clip-path: inset(0 0 100% 0);
     }
-    .main-nav .dest:hover .more {
+    .dest:hover .more {
         animation: more 300ms linear forwards;
     }
     @keyframes more {
@@ -832,15 +841,15 @@ select-pure {
             clip-path: inset(0 0 0 0);
         }
     }
-    .main-nav .more li {
+    .more li {
         color: var(--mainBlue);
         padding: .5em;
     }
-    .main-nav .more li:not(:last-child) {
-        border-bottom: 1px solid var(--blueLight);
+    .more li {
+        border-bottom: 1px solid var(--mainBlue);
     }
     .main-nav .more li:hover {
-        background-color: var(--blueLight);
+        border-color: var(--orange);
     }
     .hamb,
     .small-menu {
@@ -857,14 +866,11 @@ select-pure {
     }
 }
 
-@media (min-width:1050px) {
+@media (min-width:1024px) {
     .card {
-        flex-basis: 350px;
+        flex-basis: 330px;
     }
     .destination img {
         width: 600px;
-    }
-    .destination:nth-child(odd)>img {
-        order: 2;
     }
 }
