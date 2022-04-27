@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/alphatours/static/css/main.13ea02a3.css",
-    "main.js": "/alphatours/static/js/main.c1185762.js",
+    "main.css": "/alphatours/static/css/main.6bf020d3.css",
+    "main.js": "/alphatours/static/js/main.57ec1ed7.js",
     "static/media/logo.png": "/alphatours/static/media/logo.980825d9e19a336b65d0.png",
     "index.html": "/alphatours/index.html",
-    "main.13ea02a3.css.map": "/alphatours/static/css/main.13ea02a3.css.map",
-    "main.c1185762.js.map": "/alphatours/static/js/main.c1185762.js.map"
+    "main.6bf020d3.css.map": "/alphatours/static/css/main.6bf020d3.css.map",
+    "main.57ec1ed7.js.map": "/alphatours/static/js/main.57ec1ed7.js.map"
   },
   "entrypoints": [
-    "static/css/main.13ea02a3.css",
-    "static/js/main.c1185762.js"
+    "static/css/main.6bf020d3.css",
+    "static/js/main.57ec1ed7.js"
   ]
 }
